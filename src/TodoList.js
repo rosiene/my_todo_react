@@ -7,15 +7,15 @@ class TodoList extends React.Component {
   renderTodo(todo){
     return <Todo
       key={todo.id}
-      description={todo.description}
-      completed={todo.completed}
+      todo={todo}
+      onTodoChecked={this.props.onTodoChecked}
       />;
   }
 
   render() {
     return (
       <List>
-        {this.props.todos.map(this.renderTodo)}
+        {this.props.todos.map(this.renderTodo.bind(this))}
       </List>
     );
   }

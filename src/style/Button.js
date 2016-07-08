@@ -15,7 +15,9 @@ const button = {
 }
 
 class Button extends React.Component {
+  
   render() {
+
     return (
       <button style={ button }  type={this.props.type}>{this.props.label}</button>
     );

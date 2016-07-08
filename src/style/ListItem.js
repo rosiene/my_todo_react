@@ -6,6 +6,7 @@ const listItem = {
 }
 
 class ListItem extends React.Component {
+
   render() {
     return (
       <div style={ listItem }>
