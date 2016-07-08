@@ -8,7 +8,7 @@ import DeleteTodo from './DeleteTodo';
 import Container from './style/Container'
 import Title from './style/Title'
 
-const urlJSON = "https://whispering-reef-61715.herokuapp.com/todos/";
+const urlJSON = "https://whispering-reef-61715.herokuapp.com/todos";
 
 class App extends React.Component {
 
@@ -60,7 +60,7 @@ class App extends React.Component {
       if(todoItem.completed){
         $.ajax({
           type: "DELETE",
-          url: urlJSON + todoItem.id,
+          url: urlJSON + "/" + todoItem.id,
           data: JSON.stringify({
               todo: todoItem
           }),
@@ -88,7 +88,7 @@ class App extends React.Component {
 
     $.ajax({
       type: "PUT",
-      url: urlJSON + todoChecked.id,
+      url: urlJSON + "/" + todoChecked.id,
       data: JSON.stringify({
           todo: todoChecked
       }),
