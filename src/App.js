@@ -8,7 +8,7 @@ import DeleteTodo from './DeleteTodo';
 import Container from './style/Container'
 import Title from './style/Title'
 
-const urlJSON = "https://whispering-reef-61715.herokuapp.com/todos";
+const urlJSON = "https://whispering-reef-61715.herokuapp.com/todos/";
 
 class App extends React.Component {
 
