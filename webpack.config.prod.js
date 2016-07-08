@@ -29,6 +29,15 @@ module.exports = {
       test: /\.js$/,
       loaders: ['babel'],
       include: path.join(__dirname, 'src')
-    }]
+    },
+    // Bootstrap fonts
+    { test: /\.woff2?$/,    loader: "url-loader?limit=10000&minetype=application/font-woff" },
+    { test: /\.ttf$/,       loader: "file-loader" },
+    { test: /\.eot$/,       loader: "file-loader" },
+    // Images
+    { test: /\.svg$/,       loader: "file-loader" },
+    { test: /\.(png|gif)$/, loader: "file-loader" },
+    // Sass, CSS, and style loaders
+    { test: /\.scss$/,      loader: 'style!css!sass'}]
   }
 };
