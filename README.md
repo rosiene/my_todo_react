@@ -1,15 +1,10 @@
-# React Starter
+# Todo Rails API
 
 ## Installation
 
 ```bash
-npm install
-npm start
-open http://localhost:3000
+rake db:create
+rake db:migrate
+bundle install
 ```
 
-
-------------------
-
-Simplified version of [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate) for the
-traineeship program.
